@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CDN Test</title>
+  <script type="module" src="/cdn/v1/spark-card-element.js"></script>
+  <script type="module" src="/cdn/v1/spark-profile-card.js"></script>
+  <script type="module" src="/cdn/v1/spark-code-block.js"></script>
+  <script type="module" src="/cdn/v1/spark-notifier.js"></script>
+  <script type="module" src="/cdn/v1/spark-r.button.js"></script>
+</head>
+<body style="font-family: sans-serif; padding: 2rem;">
+  <h1>Testing Lit Components from Node CDN</h1>
+
+  <card-element title="Server Status" collapsible>
+    <p>All CDN routes are active and working.</p>
+  </card-element>
+
+  <profile-card username="Ronan">
+    <p>Extended profile card loaded from CDN!</p>
+  </profile-card>
+
+  <code-block language="javascript">
+const express = require('express');
+const app = express();
+
+app.listen(3000, () => console.log('CDN running!'));
+</code-block>
+
+<spark-notifier type="success" duration="5000">
+ FILE UPLOADED
+</spark-notifier>
+<spark-r-button id="action-btn" variant="primary">Submit Data</spark-r-button>
+
+<script>
+  const btn = document.getElementById('action-btn');
+
+  // Standard native click listener
+  btn.addEventListener('click', (e) => {
+    console.log('Native click caught on host element');
+  });
+
+  // Custom event listener with extra details
+  btn.addEventListener('spark-click', (e) => {
+    console.log('Spark click variant:', e.detail.variant);
+  });
+</script>
+</body>
+</html>
