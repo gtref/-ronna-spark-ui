@@ -27,6 +27,7 @@ import '@ronna/spark-ui';
 | `<profile-card>` | Creates a block the same as the card element but shows profile details. |
 | `<spark-notifier>` | Creates a basic notification toast. |
 | `<spark-r-button>` | Creates a simple round button with support for external event listeners. |
+| `<spark-slider>` | Creates an accessible configurable range slider. |
 
 ## CDN
 

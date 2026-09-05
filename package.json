@@ -1,6 +1,6 @@
 {
   "name": "@ronna/spark-ui",
-  "version": "0.1.5",
+  "version": "0.2.5",
   "description": "Simple, elegant Lit web components.",
   "type": "module",
   "main": "./public/cdn/v1/index.js",
@@ -11,7 +11,8 @@
     "./code-block": "./public/cdn/v1/spark-code-block.js",
     "./notifier": "./public/cdn/v1/spark-notifier.js",
     "./profile-card": "./public/cdn/v1/spark-profile-card.js",
-    "./button": "./public/cdn/v1/spark-r.button.js"
+    "./button": "./public/cdn/v1/spark-r.button.js",
+    "./slider": "./public/cdn/v1/spark-slider.js"
   },
   "files": [
     "public/cdn/v1",

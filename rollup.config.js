@@ -31,5 +31,10 @@ export default [
     input: 'components/buttons/spark-r.button.js',
     output: { file: 'public/cdn/v1/spark-r.button.js', format: 'es' },
     plugins : [resolve(), terser()]
+  },
+  {
+    input: 'components/sliders/spark-slider.js',
+    output: { file: 'public/cdn/v1/spark-slider.js', format: 'es' },
+    plugins: [resolve(), terser()]
   }
 ];
