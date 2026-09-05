@@ -36,5 +36,10 @@ export default [
     input: 'components/sliders/spark-slider.js',
     output: { file: 'public/cdn/v1/spark-slider.js', format: 'es' },
     plugins: [resolve(), terser()]
+  },
+  {
+    input: 'components/dialog/spark-dialog.js',
+    output: { file: 'public/cdn/v1/spark-dialog.js', format: 'es' },
+    plugins: [resolve(), terser()]
   }
 ];

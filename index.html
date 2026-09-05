@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CDN Test</title>
-  <script type="module" src="/cdn/v1/spark-card-element.js"></script>
-  <script type="module" src="/cdn/v1/spark-profile-card.js"></script>
-  <script type="module" src="/cdn/v1/spark-code-block.js"></script>
-  <script type="module" src="/cdn/v1/spark-notifier.js"></script>
-  <script type="module" src="/cdn/v1/spark-r.button.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+  </style>
+  <script type="module" src="/cdn/v1/index.js"></script>
 </head>
-<body style="font-family: sans-serif; padding: 2rem;">
+<body>
   <h1>Testing Lit Components from Node CDN</h1>
 
   <card-element title="Server Status" collapsible>
@@ -32,8 +35,22 @@ app.listen(3000, () => console.log('CDN running!'));
 </spark-notifier>
 <spark-r-button id="action-btn" variant="primary">Submit Data</spark-r-button>
 
+<p>
+  <spark-r-button id="open-dialog-btn" variant="secondary">Open Dialog</spark-r-button>
+</p>
+
+<spark-dialog id="demo-dialog" title="Demo Dialog">
+  <p>This dialog is extending the shared Spark base dialog.</p>
+  <spark-r-button slot="footer" id="close-dialog-btn" variant="secondary">
+    Close
+  </spark-r-button>
+</spark-dialog>
+
 <script>
   const btn = document.getElementById('action-btn');
+  const openDialogButton = document.getElementById('open-dialog-btn');
+  const closeDialogButton = document.getElementById('close-dialog-btn');
+  const dialog = document.getElementById('demo-dialog');
 
   // Standard native click listener
   btn.addEventListener('click', (e) => {
@@ -43,6 +60,14 @@ app.listen(3000, () => console.log('CDN running!'));
   // Custom event listener with extra details
   btn.addEventListener('spark-click', (e) => {
     console.log('Spark click variant:', e.detail.variant);
+  });
+
+  openDialogButton.addEventListener('spark-click', () => {
+    dialog.openDialog();
+  });
+
+  closeDialogButton.addEventListener('spark-click', () => {
+    dialog.close();
   });
 </script>
 </body>
