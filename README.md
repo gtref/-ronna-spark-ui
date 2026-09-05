@@ -1,6 +1,8 @@
 # SPARK UI
 ![npm version](https://img.shields.io/npm/v/@ronna/spark-ui)
 ![npm downloads](https://img.shields.io/npm/dw/@ronna/spark-ui)
+![unpkg](https://img.shields.io/badge/unpkg-available-blue)
+
 
 
 Spark UI is a Lit-powered library of custom HTML elements.
