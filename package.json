@@ -1,7 +1,7 @@
 {
   "name": "@ronna/spark-ui",
   "version": "0.3.6",
-  "description": "Simple, elegant Lit web components.",
+  "description": "Lightweight, elegant Lit web components for modern web interfaces.",
   "type": "module",
   "main": "./public/cdn/v1/index.js",
   "module": "./public/cdn/v1/index.js",
@@ -32,9 +32,10 @@
     "web-components",
     "lit",
     "custom-elements",
-    "ui"
+    "ui",
+    "design-system"
   ],
-  "author": "",
+  "author": "Ronna",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.6",
