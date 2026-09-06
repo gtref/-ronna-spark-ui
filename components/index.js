@@ -6,3 +6,4 @@ export { SparkRButton } from './buttons/spark-r.button.js';
 export { SparkSlider } from './sliders/spark-slider.js';
 export { SparkBaseDialog } from './dialog/spark-base-dialog.js';
 export { SparkDialog } from './dialog/spark-dialog.js';
+export { SparkBadge } from './badge/spark-badge.js';
