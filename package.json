@@ -1,6 +1,6 @@
 {
   "name": "@ronna/spark-ui",
-  "version": "0.3.7",
+  "version": "0.3.6",
   "description": "Lightweight, elegant Lit web components for modern web interfaces.",
   "type": "module",
   "main": "./public/cdn/v1/index.js",
