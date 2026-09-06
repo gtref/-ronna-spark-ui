@@ -13,7 +13,8 @@
     "./profile-card": "./public/cdn/v1/spark-profile-card.js",
     "./button": "./public/cdn/v1/spark-r.button.js",
     "./slider": "./public/cdn/v1/spark-slider.js",
-    "./dialog": "./public/cdn/v1/spark-dialog.js"
+    "./dialog": "./public/cdn/v1/spark-dialog.js",
+    "./badge": "./public/cdn/v1/spark-badge.js"
   },
   "files": [
     "public/cdn/v1",

@@ -41,5 +41,10 @@ export default [
     input: 'components/dialog/spark-dialog.js',
     output: { file: 'public/cdn/v1/spark-dialog.js', format: 'es' },
     plugins: [resolve(), terser()]
+  },
+  {
+    input: 'components/badge/spark-badge.js',
+    output: { file: 'public/cdn/v1/spark-badge.js', format: 'es' },
+    plugins: [resolve(), terser()]
   }
 ];
