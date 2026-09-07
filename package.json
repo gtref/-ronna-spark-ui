@@ -12,6 +12,8 @@
     "./notifier": "./public/cdn/v1/spark-notifier.js",
     "./profile-card": "./public/cdn/v1/spark-profile-card.js",
     "./button": "./public/cdn/v1/spark-r.button.js",
+    "./button-success": "./public/cdn/v1/spark-r-button-success.js",
+    "./button-danger": "./public/cdn/v1/spark-r-button-danger.js",
     "./slider": "./public/cdn/v1/spark-slider.js",
     "./dialog": "./public/cdn/v1/spark-dialog.js",
     "./badge": "./public/cdn/v1/spark-badge.js"

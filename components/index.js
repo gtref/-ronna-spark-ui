@@ -3,6 +3,8 @@ export { CodeBlock } from './spark-code-block.js';
 export { SparkNotifier } from './spark-notifier.js';
 export { ProfileCard } from './spark-profile-card.js';
 export { SparkRButton } from './buttons/spark-r.button.js';
+export { SparkRButtonSuccess } from './buttons/spark-r-button-success.js';
+export { SparkRButtonDanger } from './buttons/spark-r-button-danger.js';
 export { SparkSlider } from './sliders/spark-slider.js';
 export { SparkBaseDialog } from './dialog/spark-base-dialog.js';
 export { SparkDialog } from './dialog/spark-dialog.js';

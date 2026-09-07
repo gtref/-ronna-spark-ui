@@ -9,6 +9,12 @@
       font-family: sans-serif;
       padding: 2rem;
     }
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin: 1rem 0;
+      flex-wrap: wrap;
+    }
   </style>
   <script type="module" src="/cdn/v1/index.js"></script>
 </head>
@@ -33,31 +39,49 @@ app.listen(3000, () => console.log('CDN running!'));
 <spark-notifier type="success" duration="5000">
  FILE UPLOADED
 </spark-notifier>
-<spark-r-button id="action-btn" variant="primary">Submit Data</spark-r-button>
+
+<h3>Button Variants & Sizes</h3>
+<div class="button-group">
+  <spark-r-button id="action-btn" variant="primary" size="md">Submit Data</spark-r-button>
+  <spark-r-button variant="secondary" size="sm">Secondary SM</spark-r-button>
+  <spark-r-button-danger size="lg">Danger LG</spark-r-button-danger>
+  <spark-r-button-success>Success</spark-r-button-success>
+  <spark-r-button variant="warning">Warning</spark-r-button>
+  <spark-r-button variant="outline">Outline</spark-r-button>
+</div>
 
 <p>
-  <spark-r-button id="open-dialog-btn" variant="secondary">Open Dialog</spark-r-button>
+  <spark-r-button id="open-dialog-btn" variant="secondary">Open Standard Dialog</spark-r-button>
+  <spark-r-button id="open-alert-dialog-btn" variant="warning">Open Alert Dialog</spark-r-button>
 </p>
 
-<spark-dialog id="demo-dialog" title="Demo Dialog">
-  <p>This dialog is extending the shared Spark base dialog.</p>
+<spark-dialog id="demo-dialog" title="Demo Dialog" size="lg">
+  <p>This dialog is extending the shared Spark base dialog with various types and sizes.</p>
   <spark-r-button slot="footer" id="close-dialog-btn" variant="secondary">
     Close
   </spark-r-button>
 </spark-dialog>
 
+<spark-dialog-alert id="alert-dialog" title="Alert Notification" size="sm">
+  <p>This is an important alert dialog with a specialized style!</p>
+  <spark-r-button slot="footer" id="close-alert-btn" variant="primary">
+    Acknowledge
+  </spark-r-button>
+</spark-dialog-alert>
+
 <script>
   const btn = document.getElementById('action-btn');
   const openDialogButton = document.getElementById('open-dialog-btn');
+  const openAlertDialogButton = document.getElementById('open-alert-dialog-btn');
   const closeDialogButton = document.getElementById('close-dialog-btn');
+  const closeAlertButton = document.getElementById('close-alert-btn');
   const dialog = document.getElementById('demo-dialog');
+  const alertDialog = document.getElementById('alert-dialog');
 
-  // Standard native click listener
   btn.addEventListener('click', (e) => {
     console.log('Native click caught on host element');
   });
 
-  // Custom event listener with extra details
   btn.addEventListener('spark-click', (e) => {
     console.log('Spark click variant:', e.detail.variant);
   });
@@ -66,8 +90,16 @@ app.listen(3000, () => console.log('CDN running!'));
     dialog.openDialog();
   });
 
+  openAlertDialogButton.addEventListener('spark-click', () => {
+    alertDialog.openDialog();
+  });
+
   closeDialogButton.addEventListener('spark-click', () => {
     dialog.close();
+  });
+
+  closeAlertButton.addEventListener('spark-click', () => {
+    alertDialog.close();
   });
 </script>
 </body>
